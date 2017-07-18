@@ -125,3 +125,10 @@ endif
 " ctrlp plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" open ctag in tab/vertical split
+map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" max line length
+let &colorcolumn=join(range(81,999),",")
+let &colorcolumn="80,".join(range(400,999),",")
+
